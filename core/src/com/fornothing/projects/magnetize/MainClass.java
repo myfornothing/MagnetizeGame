@@ -13,23 +13,25 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.fornothing.projects.magnetize.entities.Player;
 import com.fornothing.projects.magnetize.screens.GameScreen;
+import com.fornothing.projects.magnetize.utils.ScrollingBackground;
 
 import static com.fornothing.projects.magnetize.entities.Player.MOVEMENT;
 import static com.fornothing.projects.magnetize.entities.Player.MOVEMENT_GO;
 
 public class MainClass extends Game {
-	public static String APP_TITLE = "Magnetize";
-	public static double APP_VERSION = 0.1;
-	public static int APP_DESKTOP_WIDTH = 1000;
-	public static int APP_DESKTOP_HEIGHT = 1500;
-	public static int APP_FPS = 60;
+	public static final String APP_TITLE = "Magnetize";
+	public static final double APP_VERSION = 0.1;
+	public static final int APP_DESKTOP_WIDTH = 1000;
+	public static final int APP_DESKTOP_HEIGHT = 1500;
+	public static final int APP_FPS = 60;
 	// Game Variables
-	public static int V_WIDTH = 420;
-	public static int V_HEIGHT = 720;
+	public static final int V_WIDTH = 420;
+	public static final int V_HEIGHT = 720;
 	// Shared resources
 	public static World world;
 	public static Stage stage;
 	public static OrthographicCamera gamecam;
+	public static ScrollingBackground scrollingBackground;
 	// Batches
 	public static SpriteBatch batch;
 	public static ShapeRenderer shapeRen;
@@ -39,12 +41,13 @@ public class MainClass extends Game {
 	
 	@Override
 	public void create () {
-		assets = new AssetManager();
+		this.assets = new AssetManager();
 		gamecam = new OrthographicCamera();
 		gamecam.setToOrtho(false, V_WIDTH, V_HEIGHT);
 		batch = new SpriteBatch();
 		shapeRen = new ShapeRenderer();
 		world = new World(new Vector2(0f, 0f), true);
+        this.scrollingBackground = new ScrollingBackground();
 
         //Screens
         gameScreen = new GameScreen(this);
@@ -77,8 +80,14 @@ public class MainClass extends Game {
             Player.update(delta);
         }
     }
-	
-	@Override
+
+    @Override
+    public void resize(int width, int height) {
+        gamecam.update();
+        super.resize(width, height);
+    }
+
+    @Override
 	public void dispose () {
         super.dispose(); System.out.println("super dispose");
         batch.dispose(); System.out.println("batch dispose");

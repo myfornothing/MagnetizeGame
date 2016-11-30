@@ -42,6 +42,8 @@ public class GameScreen implements Screen {
     public GameScreen(final MainClass main) {
         stage = new Stage(new FitViewport(MainClass.V_WIDTH /2, MainClass.V_HEIGHT /2, gamecam));
         gamecam.setToOrtho(false, MainClass.V_WIDTH, MainClass.V_HEIGHT);
+
+
     }
 
     @Override
