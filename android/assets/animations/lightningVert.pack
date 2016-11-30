@@ -1,0 +1,61 @@
+
+lightningVert.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+lightningVert
+  rotate: false
+  xy: 0, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 2
+lightningVert
+  rotate: false
+  xy: 101, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 3
+lightningVert
+  rotate: false
+  xy: 202, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 4
+lightningVert
+  rotate: false
+  xy: 303, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 5
+lightningVert
+  rotate: false
+  xy: 404, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 6
+lightningVert
+  rotate: false
+  xy: 505, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 7
+lightningVert
+  rotate: false
+  xy: 606, 0
+  size: 100, 483
+  orig: 100, 483
+  offset: 0, 0
+  index: 8
+lightningVert
+  rotate: false
+  xy: 707, 1
+  size: 100, 482
+  orig: 100, 482
+  offset: 0, 0
+  index: 1

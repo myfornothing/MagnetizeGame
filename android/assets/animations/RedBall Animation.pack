@@ -1,0 +1,26 @@
+
+RedBall Animation.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+ball001
+  rotate: false
+  xy: 0, 0
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+ball002
+  rotate: false
+  xy: 31, 0
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+ball003
+  rotate: false
+  xy: 62, 0
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
